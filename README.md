@@ -32,6 +32,15 @@ Referência oficial:
 4. Combina risco técnico e impacto operacional em `priority_score`.
 5. Exporta uma tabela final de control tower para decisão.
 
+### Arquitetura conceitual
+```mermaid
+flowchart LR
+    A["Telemetry and criticality data"] --> B["Maintenance risk model"]
+    B --> C["Risk scoring"]
+    C --> D["Operational priority layer"]
+    D --> E["Control tower table"]
+```
+
 ### Estrutura do projeto
 - `main.py`: entry point local.
 - `src/sample_data.py`: gera a base sintética com sinais técnicos e operacionais.
@@ -64,6 +73,14 @@ Depois da etapa de predição, o projeto cria uma segunda camada de decisão:
 - `priority_band`: `P1`, `P2`, `P3` ou `P4`;
 - `recommended_action`: ação sugerida para a equipe.
 
+### Contrato de saída
+Artefatos principais:
+- [maintenance_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_scored_cycles.csv)
+- [maintenance_priority_tower.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_tower.csv)
+- [maintenance_priority_control_tower_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_control_tower_report.json)
+
+O segundo artefato é a peça central do projeto, porque transforma o score técnico em fila operacional acionável.
+
 ### Resultados atuais
 - `dataset_source = maintenance_control_tower_ai4i_style`
 - `row_count = 807`
@@ -88,6 +105,12 @@ Ele responde:
 - qual ativo pode esperar;
 - onde risco e impacto se combinam de forma crítica;
 - qual ação operacional faz mais sentido.
+
+### Como falar deste projeto em entrevista
+- ele separa claramente risco técnico de prioridade operacional;
+- mostra que manutenção preditiva sozinha não resolve o problema de despacho;
+- combina score de modelo com impacto, redundância e segurança;
+- aproxima o projeto de uma control tower real de manutenção.
 
 ### Do básico ao avançado
 No nível básico, o projeto é um classificador de manutenção.
@@ -139,6 +162,12 @@ The project is technically framed around the **AI4I 2020 Predictive Maintenance 
 3. Scores the latest window of each asset.
 4. Builds a `priority_score` using technical and operational signals.
 5. Exports a control tower table for action.
+
+### Output contract
+The main outputs are:
+- [maintenance_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_scored_cycles.csv)
+- [maintenance_priority_tower.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_tower.csv)
+- [maintenance_priority_control_tower_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_control_tower_report.json)
 
 ### Current results
 - `dataset_source = maintenance_control_tower_ai4i_style`
