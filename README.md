@@ -75,9 +75,9 @@ Depois da etapa de predição, o projeto cria uma segunda camada de decisão:
 
 ### Contrato de saída
 Artefatos principais:
-- [maintenance_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_scored_cycles.csv)
-- [maintenance_priority_tower.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_tower.csv)
-- [maintenance_priority_control_tower_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_control_tower_report.json)
+- [maintenance_scored_cycles.csv](data/processed/maintenance_scored_cycles.csv)
+- [maintenance_priority_tower.csv](data/processed/maintenance_priority_tower.csv)
+- [maintenance_priority_control_tower_report.json](data/processed/maintenance_priority_control_tower_report.json)
 
 O segundo artefato é a peça central do projeto, porque transforma o score técnico em fila operacional acionável.
 
@@ -105,12 +105,6 @@ Ele responde:
 - qual ativo pode esperar;
 - onde risco e impacto se combinam de forma crítica;
 - qual ação operacional faz mais sentido.
-
-### Como falar deste projeto em entrevista
-- ele separa claramente risco técnico de prioridade operacional;
-- mostra que manutenção preditiva sozinha não resolve o problema de despacho;
-- combina score de modelo com impacto, redundância e segurança;
-- aproxima o projeto de uma control tower real de manutenção.
 
 ### Do básico ao avançado
 No nível básico, o projeto é um classificador de manutenção.
@@ -165,9 +159,9 @@ The project is technically framed around the **AI4I 2020 Predictive Maintenance 
 
 ### Output contract
 The main outputs are:
-- [maintenance_scored_cycles.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_scored_cycles.csv)
-- [maintenance_priority_tower.csv](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_tower.csv)
-- [maintenance_priority_control_tower_report.json](/Users/flaviagaia/Documents/CV_FLAVIA_CODEX/maintenance-priority-control-tower/data/processed/maintenance_priority_control_tower_report.json)
+- [maintenance_scored_cycles.csv](data/processed/maintenance_scored_cycles.csv)
+- [maintenance_priority_tower.csv](data/processed/maintenance_priority_tower.csv)
+- [maintenance_priority_control_tower_report.json](data/processed/maintenance_priority_control_tower_report.json)
 
 ### Current results
 - `dataset_source = maintenance_control_tower_ai4i_style`
